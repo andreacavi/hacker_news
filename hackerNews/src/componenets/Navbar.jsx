@@ -3,7 +3,8 @@ export default function Navbar() {
   return (
     <div>
       <nav className="navBar">
-        <div className="logo">Hacker News</div>
+        <div className="logo">H</div>
+        <div className="logoName">Hacker News</div>
       </nav>
     </div>
   );

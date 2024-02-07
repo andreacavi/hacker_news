@@ -5,14 +5,28 @@
 }
 
 .navBar {
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 1rem 13rem;
   background-color: #5F4DEE;
+  display: flex;
+  align-items: center;
+
 }
 
 .logo {
+  height: 48px;
+  width: 48px;
+  border: 3px solid #fff;
+  font-weight: bolder;
+  font-size: medium;
+  color: #fff;
+  padding: 0.6rem;
+}
+
+.logoName {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 500;
+  margin-left: 1rem;
 }
 
 .container {
@@ -24,7 +38,47 @@
 .newsContainer {
   margin-top: 2rem;
   list-style: none;
+  display: flex;
+  flex-direction: column;
 
 }
 
-.newsContainer {}
+.newsContainer li {
+  padding: 1rem 2rem;
+  border: 2px solid rgba(136, 136, 136, 0.933);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.newsContainer a {
+  display: block;
+
+}
+
+.url {
+  display: block;
+  font-size: 0.9rem;
+  color: #6A5AEF;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 6px;
+  font-weight: 400;
+}
+
+.author {
+  padding: 6px 0 5px 0;
+  color: #6F69A0;
+}
+
+.author span {
+  font-weight: bold;
+}
+
+.title {
+  text-decoration: none;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  padding-bottom: 6px;
+  color: black;
+}

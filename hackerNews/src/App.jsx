@@ -27,8 +27,15 @@ function App() {
         <ul class="newsContainer">
           {data.map((item) => (
             <li key={item.objectID}>
-              <div key={item.objectID}>by {item.author}</div>
-              <a href={`${item.url}`}>{item.title}</a>
+              <div className="author" key={item.objectID}>
+                by <span>{item.author}</span>
+              </div>
+              <a className="title" href={`${item.url}`}>
+                {item.title}
+              </a>
+              <a className="url" href={`${item.url}`}>
+                {item.url}
+              </a>
             </li>
           ))}
         </ul>
