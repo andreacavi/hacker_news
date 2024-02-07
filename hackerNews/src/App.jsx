@@ -4,28 +4,32 @@ import "./App.css";
 import Navbar from "./componenets/Navbar";
 
 function App() {
-  const [data, setData] = useState([]);
-  const url = "https://hn.algolia.com/api/v1/search?query=react";
+  const [query, setQuery] = useState("");
+  const [searchResault, setsearchResault] = useState([]);
+  const url = `https://hn.algolia.com/api/v1/search?query=${query}`;
 
-  const fetchData = async () => {
+  const handleSearch = async (query) => {
     try {
+      setQuery((pervquery) => (pervquery = query));
       const res = await fetch(url);
-      const data = await res.json();
-      setData(data.hits);
-    } catch (error) {}
+      console.log(url);
+      const searchResault = await res.json();
+      setsearchResault(searchResault.hits);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
-    fetchData();
-    console.log(data.hits);
-  }, []);
+    handleSearch(query);
+  }, [query]);
 
   return (
     <>
-      <Navbar />
+      <Navbar onSearch={handleSearch} />
       <div className="container">
-        <ul class="newsContainer">
-          {data.map((item) => (
+        <ul className="newsContainer">
+          {searchResault.map((item) => (
             <li key={item.objectID}>
               <div className="author" key={item.objectID}>
                 by <span>{item.author}</span>
