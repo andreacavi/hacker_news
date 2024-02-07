@@ -14,3 +14,17 @@
   font-size: 1.5rem;
   font-weight: 500;
 }
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+
+}
+
+.newsContainer {
+  margin-top: 2rem;
+  list-style: none;
+
+}
+
+.newsContainer {}
