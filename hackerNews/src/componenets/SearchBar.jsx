@@ -10,14 +10,17 @@ export default function SearchBar({ onSearch }) {
     onSearch(query);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <input
+        className="input"
         type="text"
         value={query}
         onChange={handleChange}
         placeholder="Search ..."
       />
-      <button type="submit">search</button>
+      <button className="subBtn" type="submit">
+        search
+      </button>
     </form>
   );
 }

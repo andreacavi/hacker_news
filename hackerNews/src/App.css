@@ -5,7 +5,7 @@
 }
 
 .navBar {
-  padding: 1rem 1rem 1rem 13rem;
+  padding: 1rem 1rem 1rem 18rem;
   background-color: #5F4DEE;
   display: flex;
   align-items: center;
@@ -81,4 +81,34 @@
   font-weight: 400;
   padding-bottom: 6px;
   color: black;
+}
+
+.form {
+  position: relative;
+
+}
+
+.input {
+  padding: 12px 90px 10px 20px;
+  margin-left: 175px;
+  width: 100%;
+  display: block;
+  border-radius: 22px;
+  background-color: #f3f3f3cf;
+  color: #000;
+  border: none;
+  box-shadow: 0 0 15px 4px rgb(0 0 0 / 10%);
+}
+
+.subBtn {
+  position: absolute;
+  border-radius: 33px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  top: 0px;
+  right: -173px;
+  padding: 10px 25px;
+  z-index: 2;
 }
