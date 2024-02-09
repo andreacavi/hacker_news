@@ -30,7 +30,7 @@ function App() {
       <Navbar onSearch={handleSearch} />
       <div className="container">
         <ul className="newsContainer">
-          {searchResault &&
+          {searchResault.length > 0 &&
             searchResault.map((item) => (
               <li key={item.objectID}>
                 <div className="author" key={item.objectID}>
@@ -42,6 +42,9 @@ function App() {
                 <a className="url" href={`${item.url}`}>
                   {item.url}
                 </a>
+                <div className="author">
+                  <span>{item.num_comments}</span> comments
+                </div>
               </li>
             ))}
         </ul>
